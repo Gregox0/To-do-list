@@ -44,7 +44,7 @@ body{
   margin: 10px;
   padding: 5px;
 
-  width: 60%;
+  width: 90%;
 
   display: flex;
   align-items: center;
@@ -60,7 +60,7 @@ body{
   margin: 10px;
   padding: 5px;
 
-  width: 60%;
+  width: 90%;
 
   display: flex;
   justify-content: space-between;
@@ -104,4 +104,19 @@ a{
   color: #9032bb;
   text-decoration: none;
   font-size: small;
+}
+/* Adicione essas regras ao seu CSS */
+
+#container {
+  opacity: 0; /* Defina a opacidade inicial como 0 para tornar a div invisível */
+  animation: fadeIn 0.3s ease-in-out forwards; /* A animação ocorrerá apenas uma vez e a última fase (opacity: 1) será mantida */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0; /* Comece com uma opacidade de 0 */
+  }
+  to {
+    opacity: 1; /* Termine com uma opacidade de 1 para tornar a div completamente visível */
+  }
 }
