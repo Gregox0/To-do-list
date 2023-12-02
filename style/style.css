@@ -15,7 +15,7 @@ body{
   background-color: #9032bb;
 }
 #container{
-  width: 90%;
+  width: 95%;
   height: 75%;
 
   background-color: #fff;
@@ -43,11 +43,11 @@ body{
 #inputContainer i{
   color: #9032bb;
 }
-.inputLine{
+#inputLine{
   margin: 10px;
   padding: 5px;
 
-  width: 100%;
+  width: 95%;
 
   display: flex;
   align-items: center;
@@ -63,7 +63,7 @@ body{
   margin: 10px;
   padding: 5px;
 
-  width: 100%;
+  width: 95%;
 
   display: flex;
   justify-content: space-between;
@@ -99,7 +99,7 @@ body{
   border-radius: 50px;
   background-color: #9032bb;
   color: #fff;
-}
+}#FF2D2D
 #submit p{
   font-size: small;
 }
@@ -108,7 +108,9 @@ a{
   text-decoration: none;
   font-size: small;
 }
-
+span{
+  color: #9032bb;
+}
 #container {
   opacity: 0;
   animation: fadeIn 0.5s ease-in-out forwards;
@@ -121,4 +123,4 @@ a{
   to {
     opacity: 1;
   }
-}
+    }
