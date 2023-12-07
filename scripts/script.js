@@ -46,8 +46,10 @@ class Toggle{
       if(toggle.type){
         login(this.email.value, this.senha.value)
       }else{
-        cadastro()
+        cadastro(this.email.value, this.senha.value)
       }
+      this.email.value == ''
+      this.senha.value == ''
     }
   }
   class Change{
@@ -71,7 +73,9 @@ class Toggle{
     }
   }
   function login(email, senha){
-    firebase.auth().signInWithEmailAndPassword(email, senha).then(response => {
+    firebase.auth().signInWithEmailAndPassword(
+      email, senha
+      ).then(response => {
       window.location.href = "../mainPage.html"
     }).catch(error => {
       setTimeout(() => {
@@ -82,8 +86,19 @@ class Toggle{
         document.getElementById('inputLine').style.borderColor = 'red'
     })
   }
-  function cadastro(){
-    
+  function cadastro(email, senha) {
+    firebase.auth().createUserWithEmailAndPassword(
+      email, senha
+    ).then(() => {
+      window.location.href = "../mainPage.html";
+    }).catch(error => {
+      setTimeout(() => {
+        document.getElementById('inputLinePass').style.borderColor = '#9032bb'
+        document.getElementById('inputLine').style.borderColor = '#9032bb'
+      }, 1000)
+      document.getElementById('inputLinePass').style.borderColor = 'red'
+      document.getElementById('inputLine').style.borderColor = 'red'
+    })
   }
   const verify = new Verify()
   const toggle = new Toggle()
