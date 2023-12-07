@@ -32,17 +32,21 @@ class Toggle{
       if(!emailregex.test(this.email.value)){
         setTimeout(() => {
           document.getElementById('inputLine').style.borderColor= '#9032bb'
-          return
         },1000)
         document.getElementById('inputLine').style.borderColor = 'red'
-        
+        return
       }
       if(!senharegex.test(this.senha.value)){
         setTimeout(() => {
           document.getElementById('inputLinePass').style.borderColor= '#9032bb'
-          return
         },1000)
         document.getElementById('inputLinePass').style.borderColor = 'red'
+        return
+      }
+      if(toggle.type){
+        login(this.email.value, this.senha.value)
+      }else{
+        cadastro()
       }
     }
   }
@@ -65,6 +69,21 @@ class Toggle{
             this.type = true
         }
     }
+  }
+  function login(email, senha){
+    firebase.auth().signInWithEmailAndPassword(email, senha).then(response => {
+      window.location.href = "../mainPage.html"
+    }).catch(error => {
+      setTimeout(() => {
+          document.getElementById('inputLinePass').style.borderColor= '#9032bb'
+          document.getElementById('inputLine').style.borderColor= '#9032bb'
+        },1000)
+        document.getElementById('inputLinePass').style.borderColor = 'red'
+        document.getElementById('inputLine').style.borderColor = 'red'
+    })
+  }
+  function cadastro(){
+    
   }
   const verify = new Verify()
   const toggle = new Toggle()
