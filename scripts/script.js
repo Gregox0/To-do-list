@@ -73,9 +73,11 @@ class Toggle{
     }
   }
   function login(email, senha){
+    showLoading()
     firebase.auth().signInWithEmailAndPassword(
       email, senha
       ).then(response => {
+        hideLoading()
       window.location.href = "../mainPage.html"
     }).catch(error => {
       setTimeout(() => {
@@ -84,12 +86,15 @@ class Toggle{
         },1000)
         document.getElementById('inputLinePass').style.borderColor = 'red'
         document.getElementById('inputLine').style.borderColor = 'red'
+        hideLoading()
     })
   }
   function cadastro(email, senha) {
+    showLoading()
     firebase.auth().createUserWithEmailAndPassword(
       email, senha
     ).then(() => {
+      hideLoading()
       window.location.href = "../mainPage.html";
     }).catch(error => {
       setTimeout(() => {
@@ -98,6 +103,7 @@ class Toggle{
       }, 1000)
       document.getElementById('inputLinePass').style.borderColor = 'red'
       document.getElementById('inputLine').style.borderColor = 'red'
+      hideLoading()
     })
   }
   const verify = new Verify()
