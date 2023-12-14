@@ -63,7 +63,7 @@ body{
   margin: 10px;
   padding: 5px;
 
-  width: 95%;
+  width: 100%;
 
   display: flex;
   justify-content: space-between;
@@ -134,4 +134,4 @@ span{
   to {
     opacity: 1;
   }
-    }
+}
