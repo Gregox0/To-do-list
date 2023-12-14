@@ -73,11 +73,10 @@ class Toggle{
     }
   }
   function login(email, senha){
-      console.log('hehs')
     firebase.auth().signInWithEmailAndPassword(
       email, senha
       ).then(response => {
-      window.location.href = "mainPage.html"
+      window.location.href = "../mainPage.html"
     }).catch(error => {
       setTimeout(() => {
           document.getElementById('inputLinePass').style.borderColor= '#9032bb'
@@ -91,7 +90,7 @@ class Toggle{
     firebase.auth().createUserWithEmailAndPassword(
       email, senha
     ).then(() => {
-      window.location.href = "mainPage.html";
+      window.location.href = "../mainPage.html";
     }).catch(error => {
       setTimeout(() => {
         document.getElementById('inputLinePass').style.borderColor = '#9032bb'
