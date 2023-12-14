@@ -78,19 +78,6 @@ body{
   justify-content: center;
   align-items: center;
 }
-#log{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-#log i{
-  margin: 5px;
-  padding: 10px;
-
-  color: #fff;
-  background-color: #9032bb;
-  border-radius: 50%;
-}
 #submit button{
   width: 40%;
   padding: 5px;
