@@ -66,6 +66,15 @@ a{
   color: #9032bb;
   text-decoration: none;
 }
+#loading {
+  position: fixed;
+  display: none;
+
+  height: 100%;
+  width: 100%;
+
+  background-color: #FAFBFF87;
+}
 @keyframes fadeIn {
   from {
     opacity: 0;
