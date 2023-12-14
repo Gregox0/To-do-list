@@ -73,6 +73,7 @@ class Toggle{
     }
   }
   function login(email, senha){
+      console.log('hehs')
     firebase.auth().signInWithEmailAndPassword(
       email, senha
       ).then(response => {
