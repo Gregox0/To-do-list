@@ -77,7 +77,6 @@ class Toggle{
     firebase.auth().signInWithEmailAndPassword(
       email, senha
       ).then(response => {
-        hideLoading()
       window.location.href = "../mainPage.html"
     }).catch(error => {
       setTimeout(() => {
@@ -94,7 +93,6 @@ class Toggle{
     firebase.auth().createUserWithEmailAndPassword(
       email, senha
     ).then(() => {
-      hideLoading()
       window.location.href = "../mainPage.html";
     }).catch(error => {
       setTimeout(() => {
