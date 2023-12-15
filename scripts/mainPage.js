@@ -51,4 +51,8 @@ criartask.inputTask.addEventListener("keyup", function (event) {
     criartask.verify()
   }
 })
-      
+firebase.auth().onAuthStateChanged(user => {
+    if (!user) {
+      window.location.href = 'index.html'
+    }
+  })
