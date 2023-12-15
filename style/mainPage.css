@@ -62,7 +62,11 @@ body{
 }
 #tasks{
   width: 100%;
+  max-height: 500px;
+  
   margin: 5%;
+
+  overflow: auto;
 }
 #task{
   margin: 5px;
