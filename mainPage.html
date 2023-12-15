@@ -15,13 +15,11 @@
       <i class="fa-solid fa-bars-staggered"></i>
       <input type="text" placeholder="Digite sua tarefa aqui..." id="input">
     </div>
-    <div id="filtrar">
-      <div id="optionsContainer">
-        <button class="oa">All</button>
-        <button class="oi">Pending</button>
-        <button class="oi">Completed</button>
+    <div id="infoContainer">
+      <div id="qc">
+        <p>Você tem: <span id="total">0 Tarefas</span></p>
       </div>
-      <button id="clearAll">Clear all</button>
+      <button id="clearAll" onclick="clearAllTasks()">Clear all</button>
     </div>
     <div id="tasks">
     </div>
