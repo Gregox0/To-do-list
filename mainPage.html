@@ -5,10 +5,35 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title></title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style/mainPage.css">
 </head>
 
 <body>
-
+  <div id="container">
+    <div id="inputLine">
+      <i class="fa-solid fa-bars-staggered"></i>
+      <input type="text" placeholder="Digite sua tarefa...">
+    </div>
+    <div id="filtrar">
+      <div id="optionsContainer">
+        <button class="oa">All</button>
+        <button class="oi">Pending</button>
+        <button class="oi">Completed</button>
+      </div>
+      <button id="clearAll">Clear all</button>
+    </div>
+    <hr>
+    <div id="tasks">
+      <div id="task">
+        <p>Exemplo 2 grande pra kralho</p>
+        <div id="ct">
+          <i class="fa-solid fa-trash"></i>
+          <i class="fa-solid fa-check"></i>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 
 </html>
