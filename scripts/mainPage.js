@@ -2,10 +2,6 @@ class CriarTask {
   constructor() {
     this.container = document.getElementById('tasks')
     this.inputTask = document.getElementById('input')
-    this.tasks = {
-      user: '',
-      task: []
-    }
   }
 
   verify() {
@@ -14,6 +10,13 @@ class CriarTask {
       return
     }
     this.adicionarTask(this.inputTask.value)
+    let taskObj = {
+      conteudo: this.inputTask.value,
+      estado: 'pendente',
+      user: {uid: firebase.auth().currentUser.uid}
+    }
+    console.log(taskObj)
+    salvarTarefa(taskObj)
     this.inputTask.value = ''
   }
 
@@ -53,6 +56,23 @@ criartask.inputTask.addEventListener("keyup", function (event) {
 })
 firebase.auth().onAuthStateChanged(user => {
     if (!user) {
-      window.location.href = 'index.html'
+      window.location.href ='index.html'
+    }else{
+      acharTarefas(user)
     }
   })
+function acharTarefas(user){
+  firebase.firestore().collection('tarefas').where('user.uid', '==', user.uid).get().then(snapshot => {
+    const tarefas = snapshot.docs.map(doc => doc.data())
+    for(let i = 0; i < tarefas.length; i++){
+      criartask.adicionarTask(tarefas[i].conteudo)
+    }
+  })
+}
+function salvarTarefa(task){
+  firebase.firestore().collection('tarefas').add(task).then(() => {
+    console.log('ok');
+  }).catch(error => {
+    console.log(error);
+  });
+}
