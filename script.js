@@ -107,3 +107,9 @@ class Toggle{
   const verify = new Verify()
   const toggle = new Toggle()
   const change = new Change()
+
+  firebase.auth().onAuthStateChanged(user => {
+    if (user) {
+      window.location.href = 'mainPage.html'
+    }
+  })
