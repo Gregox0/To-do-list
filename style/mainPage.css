@@ -44,22 +44,14 @@ body{
 #inputLine{
   color: #9032bb;
 }
-#filtrar{
+#infoContainer{
   width: 100%;
   
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.oa{
-  background-color: transparent;
-  border: none;
-  color: #9032bb;
-}
-.oi{
-  border: none;
-  background-color: transparent;
-}
+
 #clearAll{
   padding: 10px;
   
@@ -97,5 +89,14 @@ body{
   background-color: #9032bb;
   color: #fff;
   border-radius: 3px;
+  font-size: small;
+}
+.completa{
+  text-decoration: line-through;
+}
+#qc span{
+  color: #9032bb;
+}
+#qc p{
   font-size: small;
 }
