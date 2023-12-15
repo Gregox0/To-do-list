@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*{
+  margin: 0;
+  
+  font-family: 'Poppins', sans-serif;
+}
+body{
+  height: 100vh;
+  width: 100vw;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: #9032bb;
+}
+#container{
+  padding: 30px;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  
+  background-color: #fff;
+  border-radius: 5px;
+}
+#inputLine{
+  margin: 10px;
+  padding: 7px;
+
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+
+  border: 2px solid #9032bb;
+  border-radius: 3px;
+}
+#inputLine input{
+  border: 0;
+  outline: 0;
+}
+#inputLine{
+  color: #9032bb;
+}
+#filtrar{
+  width: 100%;
+  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.oa{
+  background-color: transparent;
+  border: none;
+  color: #9032bb;
+}
+.oi{
+  border: none;
+  background-color: transparent;
+}
+#clearAll{
+  padding: 10px;
+  
+  border: none;
+  border-radius: 3px;
+  background-color: #9032bb;
+  color: #fff;
+}
+#tasks{
+  width: 100%;
+  margin: 5%;
+}
+#task{
+  margin: 5px;
+  padding: 5px 10px;
+  
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+  background-color: #00000017;
+  border-radius: 3px;
+}
+#ct{
+  display: flex;
+  align-items: center;
+}
+#task p{
+  font-size: small;
+}
+#task i{
+  margin: 5px;
+  padding: 8px 10px;
+  
+  background-color: #9032bb;
+  color: #fff;
+  border-radius: 3px;
+  font-size: small;
+}
