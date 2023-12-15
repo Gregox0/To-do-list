@@ -119,6 +119,8 @@ function acharTarefas(user) {
       uid: doc.id
     }))
     for (let i = 0; i < tarefas.length; i++) {
+      criartask.totalTasks++
+      criartask.updateTotalTasks()
       criartask.adicionarTask(tarefas[i].conteudo)
     }
   })
