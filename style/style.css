@@ -122,3 +122,13 @@ span{
     opacity: 1;
   }
 }
+#label{
+  margin-top: 10px;
+  display: flex;
+  width: 100%;
+  text-align: left;
+}
+label{
+  font-size: small;
+  color: #9032bb;
+}
